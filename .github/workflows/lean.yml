@@ -1,0 +1,23 @@
+name: Lean
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          build: true
+          auto-config: false
+      - name: Build standalone upload files
+        run: lake build Solutions.Theorem1 Solutions.CategoryTransfer Solutions.Lemma2
+      - name: Audit proof sources, statement, and theorem axioms
+        run: python3 scripts/audit.py
