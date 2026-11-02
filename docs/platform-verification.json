@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-02T06:19:10.594778+00:00",
+  "proofs": [
+    {
+      "theorem_name": "NoBorelUpperBoundFSigma.theorem1",
+      "theorem_id": "56adfcf7-9df7-4730-b48d-1968cd83b344",
+      "theorem_status": "Proved",
+      "submission_id": "720c3c82-3e6e-4d04-bcf9-8ba9e7e2d953",
+      "verification_status": "ACCEPTED",
+      "solution": "Solutions/Theorem1.lean",
+      "solution_sha256": "6f0a5eaedb24d12fd561e4453298363bde10880b0611ea57900f5d5264dcdd73",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "local_compile_passed": true
+    },
+    {
+      "theorem_name": "NoBorelUpperBoundFSigma.lemma2_category_transfer",
+      "theorem_id": "40920824-81c1-4fcc-8ce2-9028e5727fd5",
+      "theorem_status": "Proved",
+      "submission_id": "05ba5476-31cf-4a9b-a570-ecc38e2f2d38",
+      "verification_status": "ACCEPTED",
+      "solution": "Solutions/CategoryTransfer.lean",
+      "solution_sha256": "45f784959b9e2fb70b3d9c9093f98ba5dfaeb55948083ce7d1f6d0ff57eb5f84",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "local_compile_passed": true
+    }
+  ],
+  "proposal_id": "007144fb-a3d7-42ca-aa42-82a5990fb254",
+  "mission_moderation": "In review at last inspection; theorem acceptance is verified separately"
+}

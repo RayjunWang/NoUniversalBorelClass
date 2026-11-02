@@ -1,0 +1,16 @@
+{
+  "Theorem1": {
+    "theorem_id": "56adfcf7-9df7-4730-b48d-1968cd83b344",
+    "theorem_name": "NoBorelUpperBoundFSigma.theorem1",
+    "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "preamble": "import Definitions.Def_NoBorelUpperBound20261101\n\nset_option autoImplicit false\nuniverse u\n\n",
+    "formal_statement": "theorem NoBorelUpperBoundFSigma.theorem1\n    {Y : Type u} [TopologicalSpace Y] [PolishSpace Y] :\n    ¬ ∃ F : Setoid Y,\n      NoBorelUpperBoundFSigma.IsBorelRelation F.r ∧\n      NoBorelUpperBoundFSigma.IsFSigmaUpperBound F.r := by sorry\n"
+  },
+  "CategoryTransfer": {
+    "theorem_id": "40920824-81c1-4fcc-8ce2-9028e5727fd5",
+    "theorem_name": "NoBorelUpperBoundFSigma.lemma2_category_transfer",
+    "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "preamble": "import Definitions.Def_NoBorelUpperBoundTransfer20261101\n\nset_option autoImplicit false\nopen MeasureTheory\nuniverse u v w z\n\n",
+    "formal_statement": "theorem NoBorelUpperBoundFSigma.lemma2_category_transfer\n    {P : Type u} [MeasurableSpace P] [StandardBorelSpace P]\n    {G : Type v} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [PolishSpace G]\n    {A : ℕ → Type w} [∀ n, Group (A n)] [∀ n, TopologicalSpace (A n)]\n    [∀ n, IsTopologicalGroup (A n)] [∀ n, PolishSpace (A n)]\n    {Y : Type z} [TopologicalSpace Y] [PolishSpace Y]\n    (h : ∀ n, P → (A n →* G))\n    (h_joint : ∀ n, @Measurable (P × A n) G\n      ((inferInstance : MeasurableSpace P).prod (borel (A n))) (borel G)\n      (fun pa => h n pa.1 pa.2))\n    (h_cont : ∀ n p, Continuous (h n p))\n    (z0 : P → G) (hz : @Measurable P G inferInstance (borel G) z0)\n    (F : Setoid Y) (hF : NoBorelUpperBoundFSigma.IsBorelRelation F.r)\n    (h_bound : ∀ p, p ∉ NoBorelUpperBoundFSigma.MembershipSet h z0 →\n      NoBorelUpperBoundFSigma.BorelReducible\n        (NoBorelUpperBoundFSigma.GroupCosetRelation\n          (NoBorelUpperBoundFSigma.GeneratedSubgroup h p)) F.r) :\n    MeasurableSet (NoBorelUpperBoundFSigma.MembershipSet h z0) := by sorry\n"
+  }
+}
